@@ -11,4 +11,6 @@
 
 @interface jhViewController : GLKViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *textDisplay;
+
 @end

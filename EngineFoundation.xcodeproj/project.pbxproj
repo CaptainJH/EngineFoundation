@@ -19,9 +19,7 @@
 		A943E7E217CA45FB001A7695 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A943E7E117CA45FB001A7695 /* Default@2x.png */; };
 		A943E7E417CA45FB001A7695 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A943E7E317CA45FB001A7695 /* Default-568h@2x.png */; };
 		A943E7E717CA45FB001A7695 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A943E7E517CA45FB001A7695 /* MainStoryboard.storyboard */; };
-		A943E7E917CA45FC001A7695 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A943E7E817CA45FC001A7695 /* Shader.fsh */; };
-		A943E7EB17CA45FC001A7695 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A943E7EA17CA45FC001A7695 /* Shader.vsh */; };
-		A943E7EE17CA45FC001A7695 /* jhViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A943E7ED17CA45FC001A7695 /* jhViewController.m */; };
+		A960897617CA50E3009A4D5F /* Surface.mm in Sources */ = {isa = PBXBuildFile; fileRef = A960897517CA50E3009A4D5F /* Surface.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,10 +39,9 @@
 		A943E7E117CA45FB001A7695 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A943E7E317CA45FB001A7695 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A943E7E617CA45FB001A7695 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		A943E7E817CA45FC001A7695 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
-		A943E7EA17CA45FC001A7695 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
 		A943E7EC17CA45FC001A7695 /* jhViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jhViewController.h; sourceTree = "<group>"; };
-		A943E7ED17CA45FC001A7695 /* jhViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jhViewController.m; sourceTree = "<group>"; };
+		A960897417CA50E3009A4D5F /* Surface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface.h; sourceTree = "<group>"; };
+		A960897517CA50E3009A4D5F /* Surface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Surface.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +95,9 @@
 				A943E7DC17CA45FB001A7695 /* jhAppDelegate.h */,
 				A943E7DD17CA45FB001A7695 /* jhAppDelegate.m */,
 				A943E7E517CA45FB001A7695 /* MainStoryboard.storyboard */,
-				A943E7E817CA45FC001A7695 /* Shader.fsh */,
-				A943E7EA17CA45FC001A7695 /* Shader.vsh */,
 				A943E7EC17CA45FC001A7695 /* jhViewController.h */,
-				A943E7ED17CA45FC001A7695 /* jhViewController.m */,
+				A960897417CA50E3009A4D5F /* Surface.h */,
+				A960897517CA50E3009A4D5F /* Surface.mm */,
 				A943E7D417CA45FB001A7695 /* Supporting Files */,
 			);
 			path = EngineFoundation;
@@ -178,8 +174,6 @@
 				A943E7E217CA45FB001A7695 /* Default@2x.png in Resources */,
 				A943E7E417CA45FB001A7695 /* Default-568h@2x.png in Resources */,
 				A943E7E717CA45FB001A7695 /* MainStoryboard.storyboard in Resources */,
-				A943E7E917CA45FC001A7695 /* Shader.fsh in Resources */,
-				A943E7EB17CA45FC001A7695 /* Shader.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +186,7 @@
 			files = (
 				A943E7DA17CA45FB001A7695 /* main.m in Sources */,
 				A943E7DE17CA45FB001A7695 /* jhAppDelegate.m in Sources */,
-				A943E7EE17CA45FC001A7695 /* jhViewController.m in Sources */,
+				A960897617CA50E3009A4D5F /* Surface.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +309,7 @@
 				A943E7F317CA45FC001A7695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
