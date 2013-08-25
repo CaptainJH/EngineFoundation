@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="aCh-0K-tnH">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--JhGL Kit Dojoing View Controller-->
+        <scene sceneID="Uyh-uO-hQR">
+            <objects>
+                <viewController id="aCh-0K-tnH" customClass="jhGLKitDojoingViewController" sceneMemberID="viewController">
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="Z3U-Zj-Vc1">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbr-iN-yzQ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="4V4-6p-9Ga"/>
+                                    <constraint firstAttribute="width" constant="85" id="Mit-fv-pPO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cbr-iN-yzQ" firstAttribute="top" secondItem="Z3U-Zj-Vc1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="9Di-Rq-ybK"/>
+                            <constraint firstItem="cbr-iN-yzQ" firstAttribute="leading" secondItem="Z3U-Zj-Vc1" secondAttribute="leading" constant="7" id="Kja-H7-9Bd"/>
+                        </constraints>
+                    </glkView>
+                    <connections>
+                        <outlet property="textDisplay" destination="cbr-iN-yzQ" id="Yco-Wf-evK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3uI-31-6DG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27" y="-81"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="jhGLKitDojoingViewController" superclassName="jhViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/jhGLKitDojoingViewController.h"/>
+        </class>
+        <class className="jhViewController" superclassName="GLKViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/jhViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textDisplay" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -22,6 +22,7 @@
 		A960897617CA50E3009A4D5F /* Surface.mm in Sources */ = {isa = PBXBuildFile; fileRef = A960897517CA50E3009A4D5F /* Surface.mm */; };
 		A960897817CA523E009A4D5F /* jhViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A960897717CA523E009A4D5F /* jhViewController.mm */; };
 		A960897F17CA57F4009A4D5F /* jhGLKitDojoingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A960897E17CA57F4009A4D5F /* jhGLKitDojoingViewController.mm */; };
+		A96089AD17CA696E009A4D5F /* Storyboard_ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96089AC17CA696E009A4D5F /* Storyboard_ipad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		A960897717CA523E009A4D5F /* jhViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = jhViewController.mm; sourceTree = "<group>"; };
 		A960897B17CA5533009A4D5F /* jhGLKitDojoingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jhGLKitDojoingViewController.h; sourceTree = "<group>"; };
 		A960897E17CA57F4009A4D5F /* jhGLKitDojoingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = jhGLKitDojoingViewController.mm; sourceTree = "<group>"; };
+		A96089AC17CA696E009A4D5F /* Storyboard_ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_ipad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				A943E7DC17CA45FB001A7695 /* jhAppDelegate.h */,
 				A943E7DD17CA45FB001A7695 /* jhAppDelegate.m */,
 				A943E7E517CA45FB001A7695 /* MainStoryboard.storyboard */,
+				A96089AC17CA696E009A4D5F /* Storyboard_ipad.storyboard */,
 				A960897A17CA54A9009A4D5F /* ViewControllers */,
 				A960897417CA50E3009A4D5F /* Surface.h */,
 				A960897517CA50E3009A4D5F /* Surface.mm */,
@@ -190,6 +193,7 @@
 				A943E7E217CA45FB001A7695 /* Default@2x.png in Resources */,
 				A943E7E417CA45FB001A7695 /* Default-568h@2x.png in Resources */,
 				A943E7E717CA45FB001A7695 /* MainStoryboard.storyboard in Resources */,
+				A96089AD17CA696E009A4D5F /* Storyboard_ipad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +296,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EngineFoundation/EngineFoundation-Prefix.pch";
 				INFOPLIST_FILE = "EngineFoundation/EngineFoundation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -303,7 +309,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EngineFoundation/EngineFoundation-Prefix.pch";
 				INFOPLIST_FILE = "EngineFoundation/EngineFoundation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
