@@ -11,6 +11,11 @@
 
 @interface jhViewController : GLKViewController
 
+- (void)update;
+- (void)setupGL;
+- (void)tearDownGL;
+- (GLKBaseEffect*)getCurrentEffect;
+
 @property (weak, nonatomic) IBOutlet UILabel *textDisplay;
 
 @end

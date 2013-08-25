@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Jh View Controller-->
+        <!--JhGL Kit Dojoing View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="jhViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="jhGLKitDojoingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3" customClass="GLKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -30,11 +30,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="69" y="49"/>
         </scene>
     </scenes>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="jhGLKitDojoingViewController" superclassName="jhViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/jhGLKitDojoingViewController.h"/>
         </class>
         <class className="jhViewController" superclassName="GLKViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/jhViewController.h"/>

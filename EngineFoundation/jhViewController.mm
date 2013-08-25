@@ -7,14 +7,10 @@
 //
 
 #import "jhViewController.h"
-#import "Surface.h"
 
 
 @interface jhViewController () {
 
-    float _rotation;
-    
-    Drawable* _drawable;
 }
 @property (strong, nonatomic) EAGLContext *context;
 @property (strong, nonatomic) GLKBaseEffect *effect;
@@ -25,6 +21,11 @@
 @end
 
 @implementation jhViewController
+
+- (GLKBaseEffect*)getCurrentEffect
+{
+    return self.effect;
+}
 
 - (void)viewDidLoad
 {
@@ -79,21 +80,13 @@
     self.effect.light0.diffuseColor = GLKVector4Make(1.0f, 0.4f, 0.4f, 1.0f);
     
     glEnable(GL_DEPTH_TEST);
-    
-    //_drawable = new BoxDrawable();
-    _drawable = new SphereDrawable();
-    
+        
     self.preferredFramesPerSecond = 60;
 }
 
 - (void)tearDownGL
 {
     [EAGLContext setCurrentContext:self.context];
-    
-    if(_drawable)
-    {
-        delete _drawable;
-    }
     
     self.effect = nil;
 }
@@ -102,27 +95,6 @@
 
 - (void)update
 {
-    float aspect = fabsf(self.view.bounds.size.width / self.view.bounds.size.height);
-    GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0f), aspect, 0.1f, 100.0f);
-    
-    self.effect.transform.projectionMatrix = projectionMatrix;
-    
-    GLKMatrix4 baseModelViewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, -4.0f);
-    baseModelViewMatrix = GLKMatrix4Rotate(baseModelViewMatrix, _rotation, 0.0f, 1.0f, 0.0f);
-    
-    // Compute the model view matrix for the object rendered with GLKit
-    GLKMatrix4 modelViewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, -1.5f);
-    //modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, _rotation, 1.0f, 1.0f, 1.0f);
-    modelViewMatrix = GLKMatrix4Identity;
-    modelViewMatrix = GLKMatrix4Multiply(baseModelViewMatrix, modelViewMatrix);
-    
-    self.effect.transform.modelviewMatrix = modelViewMatrix;
-    
-    _rotation += self.timeSinceLastUpdate * 0.5f;
-    
-    self.textDisplay.text = [NSString stringWithFormat:@"%d", self.framesPerSecond];
-    
-    //////
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
@@ -132,9 +104,6 @@
     
     // Render the object with GLKit
     [self.effect prepareToDraw];
-    
-    _drawable->draw();
-    
 }
 
 @end
